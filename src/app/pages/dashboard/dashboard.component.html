@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-header>
+        <ul class="header-menu" *ngFor="let menu of menus" >
+            <li>
+                <a>{{menu.name}}</a>
+            </li>
+            <mat-divider [vertical]="false"></mat-divider>
+        </ul>
+    </mat-card-header>
+    <mat-card-content>
+        <app-generic title="Oveview Trip / Passenger">
+            <app-overview-passenger></app-overview-passenger>
+        </app-generic>
+        <app-generic title="Evolution Passenger by Trip"></app-generic>
+        <app-generic title="Entry -Exit passenger In Town / In Transit">
+            <app-entry-exit-passenger></app-entry-exit-passenger>
+        </app-generic>
+        <app-generic title="Entry -Exit passenger In Town / In Transit"></app-generic>
+    </mat-card-content>
+</mat-card>

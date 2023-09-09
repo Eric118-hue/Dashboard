@@ -1,0 +1,30 @@
+:host{
+    width: 30vw;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    img{
+        height: 4rem;
+    }
+    p{
+        margin: 0.4rem;
+        color: #707070;
+    }
+    h4{
+        margin-top: 0.4rem;
+        margin-bottom: 0;
+        color: #00042C;
+        font-weight: bold;
+    }
+    .mat-divider{
+        width: 4rem;
+        --mat-divider-width: 2px;
+    }
+    &__sommanry{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+}

@@ -1,0 +1,28 @@
+.mat-mdc-card{
+    margin-top: 1rem;
+    color: #ffff;
+    border-radius: 8px;
+    &-header{
+        padding: 0;
+        border-radius: 8px 8px 0 0;
+        background-color: #707070;
+    }
+    &-content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 1.4rem;
+    }
+    .mat-divider{
+        background-color: #ffff;
+        width: 0.5px;
+    }
+    .header-menu{
+        display: flex;
+        padding: 0;
+        li{
+            margin: 0 1rem;
+        }
+    }
+}

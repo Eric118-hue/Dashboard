@@ -6,10 +6,15 @@
     <mat-divider></mat-divider>
     <ul>
         <li *ngFor="let menu of menus">
-            <div class="menu_desc">
+            <div routeLink="dashboard" class="menu_desc">
                 <img [src]="menu.icon" alt="">
-                <a href="">{{menu.name}}</a>
+                <a [routerLink]="menu.routeLink">{{menu.name}}</a>
             </div>
+            <img [src]="menu.chevron" alt="">
         </li>
     </ul>
-</div>    
+    <div class="signature">
+        <p>© 2022, CAMTRACK SAS</p>
+        <p>Version: 1.0</p>
+    </div>
+</div>
