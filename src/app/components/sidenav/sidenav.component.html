@@ -1,0 +1,15 @@
+<div class="side-main">
+    <div class="logo">
+        <img src="../../../assets/img/Groupe602.png" alt="">
+    </div>
+    <h3>MINT</h3>
+    <mat-divider></mat-divider>
+    <ul>
+        <li *ngFor="let menu of menus">
+            <div class="menu_desc">
+                <img [src]="menu.icon" alt="">
+                <a href="">{{menu.name}}</a>
+            </div>
+        </li>
+    </ul>
+</div>    

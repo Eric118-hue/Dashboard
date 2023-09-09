@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; color: #FFFFFF;}
+body { 
+    margin: 0;  font-family: Roboto;
+    background-color: #707070;
+}
+p{
+    margin: 0;
+}
+a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;  
+    color: #FFFFFF;  
+}
+ul{
+    margin: 0;
+    padding: 10px;
+}
+li{
+    margin: 0;
+    padding: 0.5rem 1rem;
+    list-style: none;
+}
+
+:root {
+    /* Colors: */
+    --unnamed-color-ffffff6b: #FFFFFF6B;
+    --unnamed-color-707070: #707070;
+    --unnamed-color-2a99fb: #2A99FB;
+    --unnamed-color-ffffff: #FFFFFF;
+    --unnamed-color-f1f9ff: #F1F9FF;
+    --unnamed-color-7fc4fd: #7FC4FD;
+    ---0a7feb: #0A7FEB;
+    --unnamed-color-bce0fd: #BCE0FD;
+    --unnamed-color-00042c: #00042C;
+    
+    /* Font/text values */
+    --unnamed-font-family-roboto: Roboto;
+    --unnamed-font-style-normal: normal;
+    --unnamed-font-weight-normal: normal;
+    --unnamed-font-weight-bold: bold;
+    --unnamed-font-size-12: 12px;
+    --unnamed-font-size-18: 18px;
+    --unnamed-font-size-30: 30px;
+    --unnamed-character-spacing-0: 0px;
+    --unnamed-line-spacing-14: 14px;
+    --unnamed-line-spacing-22: 22px;
+    --unnamed-line-spacing-37: 37px;
+    }
+    
+    /* Character Styles */
+    .unnamed-character-style-1 {
+    font-family: var(--unnamed-font-family-roboto);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-bold);
+    font-size: var(--unnamed-font-size-30);
+    line-height: var(--unnamed-line-spacing-37);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-00042c);
+    }
+    .unnamed-character-style-2 {
+    font-family: var(--unnamed-font-family-roboto);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-18);
+    line-height: var(--unnamed-line-spacing-22);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    }
+    .unnamed-character-style-3 {
+    font-family: var(--unnamed-font-family-roboto);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-12);
+    line-height: var(--unnamed-line-spacing-14);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    }
