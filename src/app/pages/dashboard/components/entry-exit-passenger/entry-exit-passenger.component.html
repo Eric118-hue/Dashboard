@@ -1,0 +1,47 @@
+<div class="content" *ngIf="(entryExit$ | async) as entryExit">
+    <div class="content__main">
+        <div class="content__town">
+            <p class="color-gray font-size08">{{entryExit.inTown.trip}}</p>
+            <img src="/assets/icons/Groupe595.svg" alt="Localisation icon in town">
+        </div>
+        <img src="/assets/icons/car.svg" class="img_car" alt="Passenger entry-exit in town">
+        <table>
+            <tr>
+                <td class="color-gray font-size12">Entry</td>
+                <td class="color-gray font-size12">Exit</td>
+            </tr>
+            <tr>
+                <td class="td-number">
+                    <b class="number-label">{{entryExit.inTown.entry}}</b>
+                </td>
+                <td class="td-number">
+                    <b class="number-label">{{entryExit.inTown.exit}}</b>
+                </td>
+            </tr>
+            <span class="circle"></span>
+        </table>
+    </div>
+    <div class="separator"></div>
+    <div class="content__main">
+        <div class="content__town">
+            <p class="color-gray font-size08">{{entryExit.inTransit.trip}}</p>
+            <img src="/assets/icons/Groupe595.svg" alt="Localisation icon in transit">
+        </div>
+        <img src="/assets/img/Groupe599.svg" class="img_car" alt="Passenger entry-exit in transit">
+        <table>
+            <tr>
+                <td class="color-gray font-size12">Entry</td>
+                <td class="color-gray font-size12">Exit</td>
+            </tr>
+            <tr>
+                <td class="td-number">
+                    <b class="number-label">{{entryExit.inTransit.entry}}</b>
+                </td>
+                <td class="td-number">
+                    <b class="number-label">{{entryExit.inTransit.exit}}</b>
+                </td>
+            </tr>
+            <span class="circle"></span>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-subtitle>{{tit}}</mat-card-subtitle>
+        <div class="header-icon">
+            <img src="/assets/icons/ic-actions-download.svg"
+                alt="Download" 
+                class="pointer" 
+                *ngIf="content"
+                (click)="download()">
+            <img src="/assets/icons/more-vertical-whit.svg" alt="Menu" class="pointer">
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <ng-content></ng-content>
+    </mat-card-content>
+</mat-card>

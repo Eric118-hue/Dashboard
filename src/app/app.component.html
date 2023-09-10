@@ -1,12 +1,21 @@
 <mat-sidenav-container class="container">
   <mat-sidenav mode="side" opened position="start" class="sidenav">
-    <app-sidenav></app-sidenav>
+    <div class="sidenav-body">
+      <app-sidenav></app-sidenav>
+      <footer class="signature">
+        © 2022, CAMTRACK SAS
+        <br>
+        Version: 1.0
+      </footer>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content position="end">
     <div class="content-main">
-      <app-header></app-header>
+      <app-header style="position: sticky;top: 0;z-index:1;"></app-header>
       <app-filter></app-filter>
-      <router-outlet></router-outlet>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

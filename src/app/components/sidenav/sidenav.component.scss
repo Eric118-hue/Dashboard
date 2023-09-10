@@ -1,4 +1,5 @@
 .side-main{
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 16vw;
@@ -7,11 +8,14 @@
 .logo{
     margin: 1rem 1rem 0.4rem 1rem;
     border-radius: 20px;
-    background-color: #F0F2F5;
+    background-color: #606382;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
+    padding: 7px;
+    text-align: center;
+    line-height: 0;
     img{
-        margin: 7px;
+        width: 100%;
     }
 }
 h3{
@@ -24,7 +28,6 @@ h3{
 .mat-divider{
     margin: 0 0.7rem;
     background-color: #ffff;
-
 }
 
 li{
@@ -32,15 +35,15 @@ li{
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-    background-color: #707070;
+    margin-bottom: 1.5rem;
     border-radius: 20px;
     letter-spacing: 0px;
     color: #F0F2F5;
     font-size: 12px;
     cursor: pointer;
+    border: 2px solid transparent;
     &:hover{
-        border: 1px solid #ffff;
+        border: 2px solid #ffff;
     }
     .menu_desc{
         display: flex;
@@ -48,15 +51,14 @@ li{
         align-items: center;
     }
 }
-.signature{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    color: #707070;
-    font-size: 9px;
-    p{
-        margin: 0;
-        font-weight: bold;
+
+li.active {
+    background-color: var(--active-color, #0A7FEB);
+    border: 2px solid var(--color-white, #FFFFFF);
+}
+
+@media only screen and (max-height: 700px) {
+    li {
+        margin-bottom: 0.8rem;
     }
 }

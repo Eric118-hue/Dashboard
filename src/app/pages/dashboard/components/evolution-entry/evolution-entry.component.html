@@ -1,0 +1,10 @@
+<ng-container *ngIf="chartData">
+  <canvas
+    baseChart
+    [options]="chartOptions"
+    [data]="chartData"
+    type="bar"
+    width="400"
+    height="300"
+  ></canvas>
+</ng-container>

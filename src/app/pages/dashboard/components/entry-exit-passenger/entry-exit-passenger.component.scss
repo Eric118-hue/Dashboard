@@ -1,0 +1,71 @@
+.content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10px;
+
+    .separator {
+        width: 40px;
+    }    
+    @media only screen and (max-width: 1024px) {
+        .separator {
+            width: 100px;
+        }
+    }
+    
+    &__main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img.img_car{
+            height: 75px;
+        }
+    }
+    &__town{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0.8rem;
+        margin-top: 0;
+        p{
+            margin: 0;
+            color: #00042C;
+        }
+    }
+    .td-number {
+        height: 50px;
+        vertical-align: top;
+    }
+}
+
+table {
+    position: relative;
+    border-collapse: collapse; 
+    margin-top: 0.5rem;
+    .circle{
+        position: absolute;
+        top: 16px;
+        left: calc(50% - (0.5rem / 2));
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: #2A99FB;
+    }
+    h4{
+        margin: 0.5rem 0;
+        font-weight: bold;
+        color: #00042C;
+    }
+}
+td{
+    padding: 0 0.7rem;
+    width: 56px;
+    text-align: center;
+}
+tr:first-child{
+    border-bottom: 1.4px solid var(--font-color-gray, #707070);
+}
+tr td:first-child{
+    border-right: 1.4px solid var(--font-color-gray, #707070);
+
+}

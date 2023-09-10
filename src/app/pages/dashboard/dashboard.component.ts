@@ -1,30 +1,29 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
-import { GenericComponentComponent } from 'src/app/generic-component/generic-component.component';
-import { OverviewPassengerComponent } from 'src/app/components/generic/overview-passenger/overview-passenger.component';
-import { EntryExitPassengerComponent } from 'src/app/components/generic/entry-exit-passenger/entry-exit-passenger.component';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
   imports: [
     CommonModule,
+    RouterLink,
+    RouterLinkActive,
+    RouterOutlet,
     MatCardModule,
     MatDividerModule,
-    GenericComponentComponent,
-    OverviewPassengerComponent,
-    EntryExitPassengerComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardComponent {
-  menus = [
-    {name:'Overview'},
-    {name: 'Violations Analysis /100km'},
-    {name: 'Trends'},
-    {name: 'Trips & Passenger'}
-  ]
+  constructor(router: Router) {
+    router.navigate(['dashboard', {
+      outlets: {
+        dashboard: [ 'trip-passenger' ]
+      }
+    }]);
+  }
 }

@@ -1,30 +1,32 @@
-<mat-toolbar>
-    <div class="content-left">
-        <img src="../../../assets/icons/ic-layout-content-left.svg" alt="">
-        <img src="../../../assets/img/Groupe600.png" alt="">
-        <div [style.color]="'#707070'">
-            /Dashboard
-        </div>
-    </div>
-    <div class="content-right">
-        <div class="content-right__info">
-            <div class="img-cont">
-                <img src="../../../assets/img/Groupe568.png"  class="content-right__info_img" alt="">
-                <span class="actif"></span>
-            </div>
-           
-            <div class="content-right__info_name">
-                <h6>Alan Rositoman</h6>
-                <div>Super Admin</div>
-            </div>
-            <div class="content-right__info_lock">
-                <img src="../../../assets/icons/more-vertical.svg" class="more-vertical" alt="">            
-                <img src="../../../assets/icons/lock-unlock.svg" alt="">
+<ng-container *ngIf="(user$ | async) as user">
+    <mat-toolbar>
+        <div class="content-left">
+            <img class="menu-logo pointer" src="/assets/icons/ic-layout-content-left.svg" alt="Menu">
+            <img src="/assets/img/Groupe600.png" alt="Company logo">
+            <div class="color-gray font-size08">
+                /Dashboard
             </div>
         </div>
-        <div class="content-right__action">
-            <img src="../../../assets/icons/Composant13.svg" alt="">
-            <img src="../../../assets/icons/Composant12.svg" alt="">
+        <div class="content-right">
+            <div class="content-right__info">
+                <div class="img-cont">
+                    <img [src]="user.avatar"  class="content-right__info_img" alt="User avatar">
+                    <span class="actif"></span>
+                </div>
+            
+                <div class="content-right__info_name">
+                    <b>{{user.firstName}} {{user.lastName}}</b>
+                    <div>{{user.roles.join(', ')}}</div>
+                </div>
+                <div class="content-right__info_lock">
+                    <img src="/assets/icons/more-vertical.svg" class="more-vertical pointer" alt="User menu">            
+                    <img src="/assets/icons/lock-unlock.svg" alt="User unlock">
+                </div>
+            </div>
+            <div class="content-right__action">
+                <img src="/assets/icons/Composant13.svg" alt="Light/Dark mode" (click)="setMode()" class="pointer">
+                <img src="/assets/icons/Composant12.svg" alt="Settings" class="pointer">
+            </div>
         </div>
-    </div>
-</mat-toolbar>
+    </mat-toolbar>
+</ng-container>

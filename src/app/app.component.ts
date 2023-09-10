@@ -28,7 +28,6 @@ export class AppComponent implements AfterViewInit{
   }
 
   ngAfterViewInit(): void {
-    console.log(this.matSide, this.breakPoint);
     this.breakPoint.observe(["(max-width: 800px)"]).subscribe((res) => {
       if (res.matches) {
         this.matSide.mode = "over";

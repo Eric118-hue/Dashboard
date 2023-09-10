@@ -1,20 +1,33 @@
 <mat-card>
-    <mat-card-header>
-        <ul class="header-menu" *ngFor="let menu of menus" >
-            <li>
-                <a>{{menu.name}}</a>
+    <mat-card-header class="background-color-gray color-white">
+        <ul class="header-menu">
+            <li routerLinkActive="active">
+                <a [routerLink]="[{outlets: {
+                    dashboard: [ 'overview' ]
+                }}]">Overview</a>
             </li>
             <mat-divider [vertical]="false"></mat-divider>
-        </ul>
+            <li routerLinkActive="active">
+                <a [routerLink]="[{outlets: {
+                    dashboard: [ 'violation-analysis' ]
+                }}]">Violations Analysis /100km</a>
+            </li>
+            <mat-divider [vertical]="false"></mat-divider>
+            <li routerLinkActive="active">
+                <a [routerLink]="[{outlets: {
+                    dashboard: [ 'trends' ]
+                }}]">Trends</a>
+            </li>
+            <mat-divider [vertical]="false"></mat-divider>
+            <li routerLinkActive="active">
+                <a [routerLink]="[{outlets: {
+                    dashboard: [ 'trip-passenger' ]
+                }}]">Trips & Passenger</a>
+            </li>
+            <mat-divider [vertical]="false"></mat-divider>
+        </ul>  
     </mat-card-header>
     <mat-card-content>
-        <app-generic title="Oveview Trip / Passenger">
-            <app-overview-passenger></app-overview-passenger>
-        </app-generic>
-        <app-generic title="Evolution Passenger by Trip"></app-generic>
-        <app-generic title="Entry -Exit passenger In Town / In Transit">
-            <app-entry-exit-passenger></app-entry-exit-passenger>
-        </app-generic>
-        <app-generic title="Entry -Exit passenger In Town / In Transit"></app-generic>
+        <router-outlet name="dashboard"></router-outlet>
     </mat-card-content>
 </mat-card>

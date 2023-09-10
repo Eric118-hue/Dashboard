@@ -9,7 +9,8 @@
     background-color: #ffff;
     border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    
+    background-color: var(--color-white, #FFFFFF);
+    color: var(--color-black, #000000);
     &:last-child{
         padding-bottom: 0;
     }
@@ -22,7 +23,10 @@
         justify-content: center;
         align-items: center;
         img{
-            height: 30px;
+            height: 55px;
+        }
+        img.menu-logo {
+            height: 35px;
         }
     }
 
@@ -37,6 +41,7 @@
             .img-cont{
                 position: relative;
                 display: flex;
+                margin-right: 0.5em;
             }
             .actif{
                 position: absolute;

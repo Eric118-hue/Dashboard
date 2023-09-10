@@ -1,0 +1,21 @@
+[{
+  "trip": "Dia <-> Yde",
+  "entry": 6200,
+  "exit": 6000
+}, {
+  "trip": "Dia <-> Baf",
+  "entry": 5600,
+  "exit": 6000
+}, {
+  "trip": "Dia <-> Bto",
+  "entry": 3500,
+  "exit": 5000
+}, {
+  "trip": "Yde-Baf",
+  "entry": 4700,
+  "exit": 5000
+}, {
+  "trip": "Yde <-> Nga",
+  "entry": 5100,
+  "exit": 5000
+}]

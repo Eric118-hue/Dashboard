@@ -1,6 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { UserService } from 'src/app/services/user.service';
+import { AppService } from 'src/app/services/app.service';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -13,5 +15,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
+  private appService = inject(AppService);
+  public user$ = inject(UserService).getUserInfo();
+  public lightMode = true;
 
+  setMode() {
+    this.lightMode = !this.lightMode;
+    this.appService.setLightMode(this.lightMode ? 'light' : 'dark');
+  }
 }

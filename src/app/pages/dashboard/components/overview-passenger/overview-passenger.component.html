@@ -1,0 +1,15 @@
+<div class="content" *ngIf="(tripOverview$ | async) as tripOverview">
+    <div class="content__sommanry">
+        <img src="/assets/img/intransit.png" alt="Trip sommanry">
+        <p class="color-gray font-size12 text-center">Trip sommanry</p>
+        <mat-divider></mat-divider>
+        <b class="number-label text-center">{{tripOverview.sommanry}}</b>
+    </div>
+    <div class="separator"></div>
+    <div  class="content__sommanry">
+        <img src="/assets/img/Groupe603.svg" alt="Average passengers">
+        <p class="color-gray font-size12 text-center">Averrage Passengers</p>
+        <mat-divider></mat-divider>
+        <b class="number-label text-center">{{tripOverview.averragePassenger}}</b>
+    </div>
+</div>

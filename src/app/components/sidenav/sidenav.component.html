@@ -1,20 +1,19 @@
-<div class="side-main">
+<nav class="side-main">
     <div class="logo">
-        <img src="../../../assets/img/Groupe602.png" alt="">
+        <img src="/assets/img/Groupe602.png" alt="Logo ministère des transpors">
     </div>
     <h3>MINT</h3>
     <mat-divider></mat-divider>
     <ul>
-        <li *ngFor="let menu of menus">
+        <li *ngFor="let menu of menus"
+            [routerLink]="menu.routeLink"
+            class="background-color-gray color-white pointer"
+            routerLinkActive="active">
             <div routeLink="dashboard" class="menu_desc">
                 <img [src]="menu.icon" alt="">
-                <a [routerLink]="menu.routeLink">{{menu.name}}</a>
+                <span class="font-size12">{{menu.name}}</span>
             </div>
-            <img [src]="menu.chevron" alt="">
+            <img [src]="menu.chevron" alt="Menu icon" *ngIf="menu.chevron">
         </li>
     </ul>
-    <div class="signature">
-        <p>© 2022, CAMTRACK SAS</p>
-        <p>Version: 1.0</p>
-    </div>
-</div>
+</nav>

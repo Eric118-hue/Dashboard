@@ -1,20 +1,37 @@
-
 .container{
     height: 100%;
-    padding: 0.4rem;
+    padding: 1rem;
+    background-color: var(--color-lightgray, #F0F0F0);
 }
 
 .sidenav{
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 1rem 0;
     border-radius: 20px;
+    border-width: 0;
     background-color: #000A32;
-    background-image: url('../assets/img/sibarebaner@2x.png');
+    background-image: url('/assets/img/sibarebaner@2x.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     object-fit: fill;
+    filter: grayscale(var(--gray-scale, 0%));
+    -webkit-filter: grayscale(var(--gray-scale, 0%));
 }
 
+.sidenav-body {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+}
 .content-main{
     padding-left: 15px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+.signature{
+    color: var(--font-color-gray, #707070);
+    font-size: 0.8em;
+    margin: 0px 20%;
 }

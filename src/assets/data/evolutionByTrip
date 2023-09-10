@@ -1,0 +1,16 @@
+[{
+  "trip": "Dia <-> Yde",
+  "passenger": 6200
+}, {
+  "trip": "Dia <-> Baf",
+  "passenger": 5800
+}, {
+  "trip": "Dia <-> Bto",
+  "passenger": 4200
+}, {
+  "trip": "Yde-Baf",
+  "passenger": 2000
+}, {
+  "trip": "Yde <-> Nga",
+  "passenger": 2900
+}]

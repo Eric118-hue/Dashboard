@@ -1,7 +1,20 @@
-
+:root {
+    --active-color: #0A7FEB;
+    --color-white: #FFFFFF;
+    --color-black: #00042C;
+    --color-gray: #707070;
+    --color-lightgray: #F0F0F0;
+    --font-color-gray: #707070;
+    --gray-scale: 0%;
+}
+html * {
+    font-size: 1em;
+    font-family: 'D-DIN', sans-serif !important;
+}
 html, body { height: 100%; color: #FFFFFF;}
 body { 
-    margin: 0;  font-family: Roboto;
+    margin: 0;  
+    font-family: Roboto;
     background-color: #707070;
 }
 p{
@@ -21,6 +34,50 @@ li{
     margin: 0;
     padding: 0.5rem 1rem;
     list-style: none;
+}
+
+img {
+    filter: grayscale(var(--gray-scale, 0%));
+    -webkit-filter: grayscale(var(--gray-scale, 0%));
+}
+
+.text-center {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.color-white {
+    color: var(--color-white, #FFFFFF);
+}
+
+.background-color-white {
+    background-color: var(--color-white, #FFFFFF);
+}
+
+.background-color-gray {
+    background-color: var(--color-gray, #707070);
+}
+
+.color-gray {
+    color: var(--font-color-gray, #707070);
+}
+
+.font-size08 {
+    font-size: 0.8em;
+}
+
+.font-size12 {
+    font-size: 1.2em;
+}
+
+.number-label {
+    display: inline-block;
+    margin: 0.8em 0 0 0;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 :root {

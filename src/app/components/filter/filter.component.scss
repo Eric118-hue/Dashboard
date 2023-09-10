@@ -4,16 +4,12 @@
     height: auto;
     font-size: 14px;
     font-weight: normal;
-    background-color: #0A7FEB;
+    background-color: var(--active-color, #0A7FEB);
     color: #FFFFFF;
     border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    &:last-child{
-        padding-bottom: 0;
-    }
-    &:first-child{
-        padding-top: 0;
-    }
+    margin-top: 16px;
+    padding: 5px 20px;
 
     .filter_desc{
         display: flex;
@@ -24,5 +20,11 @@
             margin: 0;
             color: #FFFFFF;
         }
+    }
+    img {
+        height: 1.5em;
+    }
+    img.pointer {
+        height: 1.2em;
     }
 }

@@ -1,0 +1,31 @@
+.mat-mdc-card{
+    position: relative;
+    min-width: 50%;
+    color: var(--color-black, #000000);
+    background-color: var(--color-white, #FFFFFF);    
+    &-subtitle{
+        color: var(--color-white, #FFFFFF);
+    }
+    &-header{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        left: 0.5rem;
+        right: 0.5rem;
+        top: -14px;
+        border-radius: 11px 11px 7px 7px;
+        padding: 0.3rem 1.5rem;
+        background-color: var(--color-black, #00042C);
+    }
+    &-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 0 0 0;
+        min-height: 300px;
+    }
+    .header-icon{
+        display: flex;
+        gap: 0.8rem;
+    }
+}

@@ -1,18 +1,14 @@
 .mat-mdc-card{
     margin-top: 1rem;
-    color: #ffff;
     border-radius: 8px;
+    min-height: calc(100vh - 174px);
+    overflow-x: hidden;
+    color: var(--color-black, #000000);
+    background-color: var(--color-white, #FFFFFF);
     &-header{
         padding: 0;
+        margin-bottom: 1.7rem;
         border-radius: 8px 8px 0 0;
-        background-color: #707070;
-    }
-    &-content{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        padding: 1.4rem;
     }
     .mat-divider{
         background-color: #ffff;
@@ -22,7 +18,15 @@
         display: flex;
         padding: 0;
         li{
-            margin: 0 1rem;
+            padding: 0.8rem 3rem;
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
         }
+    }
+    .active {
+        background-color: var(--active-color, #0A7FEB);
+    }
+    li:first-child.active {
+        border-top-left-radius: 8px;
     }
 }
