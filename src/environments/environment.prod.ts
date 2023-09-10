@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://TestDev_Fabruce-Eric.versel.app/assets/data'
+  apiUrl: 'https://test-dev-fabruce-eric.vercel.app/assets/data'
 };
 
 /*
