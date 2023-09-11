@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgChartsModule } from 'ng2-charts';
 import { PassengerService } from 'src/app/services/data/passenger.service';
@@ -24,7 +24,7 @@ import { DownloadService } from 'src/app/services/download.service';
     }
   ],
 })
-export class EvolutionEntryComponent implements IDownloadable {
+export class EvolutionEntryComponent implements OnInit, IDownloadable {
   evolutionEntryExit$ = inject(PassengerService).evolutionEntryExitByTrip()
   
   private downloadService = inject(DownloadService);
@@ -33,6 +33,10 @@ export class EvolutionEntryComponent implements IDownloadable {
   public chartOptions!: ChartOptions<'bar'>;
 
   constructor() {
+  
+  }
+
+  ngOnInit(): void {
     this.evolutionEntryExit$.subscribe(tripEntryExits => {
       const labels = tripEntryExits.map(tripEntryExit => tripEntryExit.trip);
       this.chartOptions = {
