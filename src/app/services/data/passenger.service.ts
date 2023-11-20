@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable, concat, map, of, tap, toArray } from "rxjs";
+import { Observable, catchError, concat, map, of, tap, throwError, toArray } from "rxjs";
 import { TripEntryExit, TripOverview, TripPassenger } from "src/app/models/trip";
 
 @Injectable({
@@ -23,6 +23,12 @@ export class PassengerService {
       this.http.get<TripEntryExit>('/passengerEntryExitInTransit'),
       this.http.get<TripEntryExit>('/passengerEntryExitInTown'),
     ).pipe(
+      catchError((error : any ) => {
+              // Handle the error here
+      console.error('Error man:', error);
+      // Optionally, re-throw the error or return a default value
+      return throwError('Something went wrong');
+      }),
       toArray(),
       map(r => ({
         'inTransit': r[0],
