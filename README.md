@@ -1,5 +1,3 @@
-# TestDevFabruceEric
-
 
 ## Development server
 * Run `npm install`
