@@ -1,5 +1,6 @@
 
-## Development server
+## ![miniature_dashboard](https://github.com/Eric118-hue/Dashboard/assets/76616496/2c5e6dff-73ff-42b2-9b1b-cc80d1341fa8)
+Development server
 * Run `npm install`
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
